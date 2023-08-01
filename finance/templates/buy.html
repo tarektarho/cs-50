@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid py-5 text-center">
+    <form action="{{ url_for('buy') }}" method="post">
+        <div class="mb-3">
+            <label for="symbol" class="label label-default"> Symbol: </label>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text"/>
+        </div>
+        <div class="mb-3">
+            <label for="shares" class="label label-default"> Shares: </label>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="shares" type="text"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+</div>
+{% endblock %}

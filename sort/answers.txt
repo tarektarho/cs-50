@@ -1,0 +1,29 @@
+sort1 uses: Bubble Sort
+
+How do you know?: It takes slightly more amount of time when running on sorted texts compared to sort2 also the fastest on sorted list
+
+sort2 uses: Merge Sort
+
+How do you know?: It is the fastest on random/reversed list
+
+sort3 uses: Selection Sort
+
+How do you know?: it was the slowest also it's way to slow with sorted array
+
+
+
+
+TEST NOTES:
+
+sort1:
+it took real 344s, 195, 050 for reversed10000 / random10000 real 316, 246, 039 / sorted10000 real 053, 009, 026
+it took real 5.569s, 195, 050 for reversed50000 / random50000 real 396, 038, 152 / sorted50000 real 454, 044, 143
+
+
+sort2:
+it took real 110s, 013, 039 for reversed10000 / random10000 real 101, 017, 024 / sorted10000 real 088, 004, 041
+it took real 407s, 051, 158 for reversed50000 / random50000 real 539, 067, 151 / sorted50000 real 378, 041, 152
+
+sort3:
+it took real 196, 115, 032 for reversed10000 / random10000 real 196, 106, 041 / sorted10000 real 189, 099, 046
+it took real 3.407, 2.686, 178 for reversed50000 / random50000 real 196, 106, 041 / sorted50000 real 3.113, 2.636, 207(slow with sorted array)

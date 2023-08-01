@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Trigger is js when page is loaded
+            window.onload = function () {
+                // init main elements
+                const button_part_1_collection = document.getElementsByClassName("button-part-1");
+                const part_1_result_el = document.getElementById("part-1-result");
+                const restButtonP1 = document.getElementById("restButtonP1");
+                const restButtonP2 = document.getElementById("restButtonP2");
+
+                // Handle rest section on click
+                restButtonP1.addEventListener('click', restPart1)
+                restButtonP2.addEventListener('click', restPart2)
+
+                const correct = document.querySelector('.correct');
+                correct.addEventListener('click', handlCorrectAction)
+
+                function handlCorrectAction(){
+                    // Set color to green when answer is correct
+                    correct.style.backgroundColor = 'green';
+                    part_1_result_el.innerHTML = "Correct!";
+                }
+
+                const incorrects = document.querySelectorAll('.incorrect');
+
+                 for (let i = 0; i < incorrects.length; i++) {
+                    restPart1(incorrects[i])
+                    incorrects[i].addEventListener("click", () => {
+                        // Set color to red when answer is incorrect
+                        incorrects[i].style.backgroundColor = 'red';
+                        part_1_result_el.innerHTML = "Incorrect!";
+                    });
+                }
+
+
+                function restPart1()
+                {
+                    incorrects.forEach((el) => el.style.backgroundColor = '')
+                    correct.style.backgroundColor = ''
+                    part_1_result_el.innerHTML = ''
+                }
+
+
+            const input = document.querySelector('#part2_input');
+            const showResultP2 = document.querySelector("#part2Result");
+            document.querySelector('#check_button').addEventListener('click', () => {
+                if (input.value === 'Switzerland') {
+                    input.style.backgroundColor = 'green';
+                    showResultP2.innerHTML = 'Correct!';
+                } else {
+                    input.style.backgroundColor = 'red';
+                    showResultP2.innerHTML = 'Incorrect!';
+                }
+            })
+
+            function restPart2()
+                {
+                    input.style.backgroundColor = ''
+                    input.value = ''
+                    showResultP2.innerHTML = ''
+                }
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <hr>
+                <h3> What is the approximate ratio of people to sheep in New Zealand</h3>
+                <div class="answer-container">
+                    <button id="button-answer-1" class="incorrect button-error-message">6 people per 1 sheep</button>
+                    <button id="button-answer-2" class="incorrect button-error-message">3 people per 1 sheep</button>
+                    <button id="button-answer-3" class="incorrect button-error-message">1 people per 1 sheep</button>
+                    <button id="button-answer-4" class="incorrect button-error-message">1 people per 3 sheep</button>
+                    <button id="button-asnwer-5" class="correct button-error-message correct answer">1 people per 6 sheep</button>
+                </div>
+                <div>
+                    <p id="part-1-result"></p>
+                </div>
+
+                <button id="restButtonP1">Rest</button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <div class="part-2-answer-container">
+                    <input id="part2_input" type="text" placeholder="Your Answer" value=""/>
+                    <!-- Switzerland the right answer -->
+                    <button id="check_button">Check Answer</button>
+                </div>
+
+                <p id="part2Result"></p>
+
+                <button id="restButtonP2">Rest</button>
+            </div>
+        </div>
+    </body>
+</html>

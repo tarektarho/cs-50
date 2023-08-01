@@ -1,0 +1,55 @@
+1 - If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+   Characterizing the audio aura of a listener based on the top 100 songs from 2018 would involve analyzing various aspects of the music they prefer. To do this, we can use audio analysis techniques and extract features from the songs in the database. Here are some steps that can be taken to characterize the audio aura:
+
+1. **Audio Feature Extraction**: Use audio analysis libraries or APIs (e.g., Librosa, Essentia) to extract audio features from each song in the database. Some commonly used audio features include tempo, loudness, energy, pitch, key, mode, spectral features, and rhythm patterns.
+
+2. **Genre Analysis**: Analyze the distribution of genres within the top 100 songs. This will help identify the listener's preferred music genres.
+
+3. **Sentiment Analysis**: Perform sentiment analysis on the song lyrics to understand the emotional content of the songs. This can provide insights into whether the listener prefers songs with positive or negative sentiments.
+
+4. **Danceability and Energy**: Analyze danceability and energy features of the songs. This will help determine if the listener prefers upbeat, energetic tracks or more relaxed, mellow ones.
+
+5. **Instrumentation**: Examine the prevalence of different instruments used in the songs. This can give an idea of whether the listener enjoys songs with specific instruments or instrumental arrangements.
+
+6. **Duration and Popularity**: Analyze the duration of the songs and their popularity within the listener's top 100 list. This can reveal whether the listener prefers longer or shorter songs and how popular the songs are in general.
+
+7. **Artist and Album Analysis**: Study the artists and albums that appear frequently in the top 100 songs. This will provide insights into the listener's favorite artists and preferred albums.
+
+8. **Evolution over Time**: Analyze how the listener's music taste has evolved over time, possibly by looking at data from different years or periods.
+
+9. **Collaborative Filtering**: Use collaborative filtering algorithms to recommend similar songs or artists based on the listener's top 100 song choices.
+
+It's important to note that audio aura characterization is a complex task, and no single analysis can provide a complete understanding of a person's music preferences. However, by combining multiple analysis techniques, we can gain valuable insights into the listener's audio aura and music taste.
+
+2 - Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+Hypotheses for why the calculated audio aura might not be very representative of the listener:
+
+1. **Limited Song Selection**: The audio aura is based on the top 100 songs from 2018 of a single listener. This selection may not capture the full diversity of their music preferences, as it is limited to a specific time frame and does not consider songs from other years or genres they may enjoy.
+
+2. **Single Listener Bias**: Analyzing the top 100 songs of a single listener may lead to a biased representation of their audio aura. People's musical tastes can be dynamic and multifaceted, and relying solely on one list may not fully capture their full range of preferences.
+
+3. **Inclusion of Outliers**: The presence of a few songs that might not genuinely reflect the listener's overall musical preference could influence the aura calculation. Outliers can skew the results and lead to an inaccurate representation.
+
+4. **Lack of Context**: The audio aura analysis does not consider the context in which the listener listens to the songs. For example, they might enjoy certain songs while working out, but that might not be reflective of their overall musical taste.
+
+5. **Limited Audio Features**: The audio analysis might only focus on a limited set of audio features, potentially overlooking other important aspects that influence the listener's preferences, such as lyrics, cultural background, or personal memories associated with specific songs.
+
+6. **Ignoring Social Influence**: The analysis does not take into account social factors like peer influence, cultural trends, or recommendations from friends, which can significantly impact music preferences.
+
+Better ways of calculating the audio aura:
+
+1. **Larger Song Selection**: Include a more extensive and diverse set of songs from multiple years and genres to better represent the listener's overall music taste.
+
+2. **Longitudinal Analysis**: Instead of just analyzing the top 100 songs from 2018, consider a longitudinal analysis that examines the listener's music preferences over time. This can provide insights into their evolving taste.
+
+3. **User Interaction Data**: Incorporate data from the listener's actual listening behavior, such as play counts, skips, and playlist creations, to better understand their preferences in real-life situations.
+
+4. **Incorporate Music Preferences Survey**: Conduct a survey to gather additional information about the listener's music preferences, genres they enjoy, favorite artists, and the emotions they associate with specific songs.
+
+5. **Collaborative Filtering**: Utilize collaborative filtering algorithms that take into account data from multiple users to provide personalized recommendations based on the listener's taste and similar users.
+
+6. **Sentiment Analysis on Reviews**: Analyze listener reviews or comments about songs or albums to gauge emotional responses and associations.
+
+7. **Contextual Information**: Consider additional contextual information, such as time of day, location, and mood, to understand the listener's music preferences in different situations.
+
+By combining a more extensive dataset, analyzing contextual factors, and incorporating user interaction data, we can create a more accurate and comprehensive audio aura that better represents the listener's music preferences.

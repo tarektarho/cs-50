@@ -1,0 +1,14 @@
+1. Initialize the variable height
+2. Use do while loop to get a value of height between 1 and 8, from the user
+3. Prompt user for height using get_int
+4. Call the function and pass height to it as a parameter
+
+5. Declare a function called buildPyramid that takes (int height) as parameter
+    Use for loop to iterate from 1 through height value with the following condtion:
+    for (int i = 0; i < height; i++)
+    On iteration i, print i newline
+    Use nested loop(int k = height - i; k > 1; k--)
+    On iteration k, print empty space " "
+    Use second nested loop still in i (int j = 0; j <= i; j++)
+    On iteration j, print hashes
+    Finally print new line
