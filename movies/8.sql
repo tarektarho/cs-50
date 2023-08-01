@@ -5,3 +5,9 @@
 SELECT people.name
 FROM people, movies, stars
 WHERE movies.id = stars.movie_id AND people.id = stars.person_id AND movies.title = 'Toy Story';
+
+SELECT people.name
+FROM people
+JOIN stars ON people.id = stars.person_id
+JOIN movies ON stars.movie_id = movies.id
+WHERE movies.title = 'Toy Story';
